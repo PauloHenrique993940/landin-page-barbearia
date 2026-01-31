@@ -1,12 +1,20 @@
 
 import './App.css'
+import Header from './components/shared/Header';
+import Hero from './components/shared/Hero';
+import Sobre from './components/shared/Sobre';
 
 function App() {
   
 
   return (
     <>
-    <h1 className='text-red-600'>Usando Talwind.css</h1>
+    <div>
+      <Header />
+      <Hero />
+      <Sobre />
+    </div>
+  
     </>
   )
 }
