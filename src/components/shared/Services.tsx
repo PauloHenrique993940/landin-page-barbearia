@@ -1,8 +1,12 @@
+import corteCabelo from "../../assets/corte.jpg";
+import barbaRespeito from "../../assets/barber.jpg";
+import corteCabelo2 from "../../assets/cortecabelo.jpg";
+
 const Services = () => {
   const services = [
-    { name: "Corte de cabelo", price: "R$ 45,00", img: "/corte.jpg" },
-    { name: "Barba de respeito", price: "R$ 35,00", img: "/barba.jpg" },
-    { name: "Corte de cabelo", price: "R$ 45,00", img: "/corte2.jpg" }
+    { name: "Corte de cabelo", price: "R$ 45,00", img: corteCabelo },
+    { name: "Barba de respeito", price: "R$ 35,00", img: barbaRespeito },
+    { name: "Corte de cabelo", price: "R$ 45,00", img: corteCabelo2 }
   ];
 
   return (
