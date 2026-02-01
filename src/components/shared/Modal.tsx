@@ -8,16 +8,16 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) {
-    return null;
-  }
+  const [selectedTime, setSelectedTime] = useState<string | null>(null);
 
   const horarios = [
     '09:00', '10:00', '11:00', '12:00', '13:00', '14:00',
     '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'
   ];
 
-  const [selectedTime, setSelectedTime] = useState<string | null>(null);
+  if (!isOpen) {
+    return null;
+  }
 
   return (
     <div className="modal-overlay">

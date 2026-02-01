@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCart } from '../../context/CartContext';
+import { useCart } from '../../context/useCart';
 import './Cart.css';
 
 interface CartProps {
@@ -28,7 +28,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
             <div className="cart-items-list">
               {cartItems.map((item) => (
                 <div key={item.id} className="cart-item">
-                  <img src={item.img} alt={item.name} className="cart-item-image" />
+                  <img src={item.image} alt={item.name} className="cart-item-image" />
                   <div className="cart-item-details">
                     <span className="cart-item-name">{item.name}</span>
                     <span className="cart-item-price">

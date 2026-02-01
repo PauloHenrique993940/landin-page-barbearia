@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logoBarbearia from "../../assets/logo-barbearia.jpg";
 import Modal from "./Modal";
 import Cart from "./Cart"; // Importar o componente do carrinho
-import { useCart } from "../../context/CartContext"; // Importar o hook do carrinho
+import { useCart } from "../../context/useCart";
 
 const menuItems = [
   { name: "Sobre", path: "/sobre" },

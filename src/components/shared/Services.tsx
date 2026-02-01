@@ -1,22 +1,40 @@
-import corteCabelo from "../../assets/corte.jpg";
-import barbaRespeito from "../../assets/barber.jpg";
-import corteCabelo2 from "../../assets/cortecabelo.jpg";
-import { useCart, type ServiceItem } from "../../context/CartContext";
+import corteCabeloImg from "../../assets/corte.jpg";
+import barbaRespeitoImg from "../../assets/barber.jpg";
+import penteadoModernoImg from "../../assets/cortecabelo.jpg";
+
+import { useCart } from "../../context/useCart";
+import type { ServiceItem } from "../../context/cartTypes";
 
 const Services = () => {
   const { addToCart } = useCart();
 
   const services: ServiceItem[] = [
-    { id: 1, name: "Corte de cabelo", price: 45.00, img: corteCabelo },
-    { id: 2, name: "Barba de respeito", price: 35.00, img: barbaRespeito },
-    { id: 3, name: "Penteado moderno", price: 45.00, img: corteCabelo2 }
+    {
+      id: 1,
+      name: "Corte de cabelo",
+      price: 45.0,
+      image: corteCabeloImg,
+    },
+    {
+      id: 2,
+      name: "Barba de respeito",
+      price: 35.0,
+      image: barbaRespeitoImg,
+    },
+    {
+      id: 3,
+      name: "Penteado moderno",
+      price: 45.0,
+      image: penteadoModernoImg,
+    },
   ];
 
   return (
     <section
       className="
         py-20 px-6
-        bg-white text-gray-800
+        text-gray-800
+        bg-white
       "
     >
       <div
@@ -32,15 +50,21 @@ const Services = () => {
             text-3xl font-bold
             uppercase
           "
-        >Serviços</h2>
+        >
+          Serviços
+        </h2>
+
         <p
           className="
             max-w-2xl
             mb-12 mx-auto
             text-gray-600
           "
-        >Escolha um de nossos serviços premium e sinta a diferença. Qualidade e estilo em cada detalhe.</p>
-        
+        >
+          Escolha um de nossos serviços premium e sinta a diferença.
+          Qualidade e estilo em cada detalhe.
+        </p>
+
         <div
           className="
             grid grid-cols-1
@@ -52,22 +76,28 @@ const Services = () => {
             <div
               key={service.id}
               className="
-                flex flex-col
-                overflow-hidden
+                flex flex-col overflow-hidden
                 bg-white
                 rounded-lg border border-gray-100
                 shadow-md
               "
             >
               <img
-                src={service.img}
+                src={service.image}
                 alt={service.name}
                 className="
                   object-cover
                   w-full h-64
                 "
               />
-              <div className="p-4 flex-grow flex flex-col">
+
+              <div
+                className="
+                  flex flex-col
+                  p-4
+                  grow
+                "
+              >
                 <div
                   className="
                     flex
@@ -79,7 +109,10 @@ const Services = () => {
                     className="
                       font-bold text-lg
                     "
-                  >{service.name}</span>
+                  >
+                    {service.name}
+                  </span>
+
                   <span
                     className="
                       py-1 px-3
@@ -87,18 +120,21 @@ const Services = () => {
                       bg-black
                       rounded
                     "
-                  >R$ {service.price.toFixed(2)}</span>
+                  >
+                    R$ {service.price.toFixed(2)}
+                  </span>
                 </div>
+
                 <button
                   onClick={() => addToCart(service)}
                   className="
-                    mt-auto py-2 px-4
                     w-full
+                    mt-auto py-2 px-4
                     text-white font-bold
                     bg-blue-600
                     rounded-lg
                     transition-colors
-                    hover:bg-blue-700 duration-300
+                    duration-300 hover:bg-blue-700
                   "
                 >
                   Adicionar ao carrinho
