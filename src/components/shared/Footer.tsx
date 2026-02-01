@@ -1,3 +1,5 @@
+import BarberLogo from '../../assets/logo-barbearia.jpg';
+import Whatshap from '../../assets/whatsapp.png';
 const Footer = () => {
   return (
     <footer
@@ -19,7 +21,7 @@ const Footer = () => {
         <span>Insta</span> <span>Face</span> <span>Twitter</span>
       </div>
       <img
-        src="/logo-barber.png"
+        src={BarberLogo}
         alt="Barber Logo"
         className="
           w-24
@@ -29,7 +31,7 @@ const Footer = () => {
       
       {/* Botão flutuante WhatsApp */}
       <a
-        href="https://wa.me/seunumeroaqui"
+        href="https://wa.me/73993061316"
         className="
           p-4
           bg-[#25d366]
@@ -39,7 +41,7 @@ const Footer = () => {
         "
       >
         <img
-          src="/whatsapp-icon.png"
+          src={Whatshap}
           alt="WhatsApp"
           className="
             w-8 h-8

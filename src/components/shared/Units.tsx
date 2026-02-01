@@ -1,3 +1,5 @@
+import Unidade1 from '../../assets/unidades/unidade.jpg';
+import Unidade2 from '../../assets/unidades/unidade2.webp'
 const Units = () => {
   return (
     <section
@@ -11,6 +13,7 @@ const Units = () => {
           mb-12
           text-center text-2xl font-bold
           uppercase
+          text-black
         "
       >Nossas Unidades</h2>
       <div
@@ -32,7 +35,7 @@ const Units = () => {
           "
         >
           <img
-            src="/unidade-1.jpg"
+            src= {Unidade1}
             alt="Unidade 1"
             className="
               object-cover
@@ -60,7 +63,7 @@ const Units = () => {
           "
         >
           <img
-            src="/unidade-2.jpg"
+            src={Unidade2}
             alt="Unidade 2"
             className="
               object-cover

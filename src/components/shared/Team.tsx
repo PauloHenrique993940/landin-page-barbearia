@@ -1,8 +1,12 @@
+import Barbeiro from '../../assets/barbeiros/barbeiro_1.png';
+import Pedro from '../../assets/equipe/Perfil1.jpg';
+import Renato   from '../../assets/equipe/perfil2.jpg';
+
 const Team = () => {
   const team = [
-    { name: "Lucas Abreu", role: "Barbeiro", img: "/lucas.jpg" },
-    { name: "Pedro Marins", role: "Barbeiro", img: "/pedro.jpg" },
-    { name: "Renato Barbosa", role: "Barbeiro", img: "/renato.jpg" }
+    { name: "Lucas Abreu", role: "Barbeiro", img: Barbeiro },
+    { name: "Pedro Marins", role: "Barbeiro", img: Pedro },
+    { name: "Renato Barbosa", role: "Barbeiro", img: Renato }
   ];
 
   return (
@@ -20,14 +24,14 @@ const Team = () => {
           items-center
         "
       >
-         <h2
-           className="
-             text-gray-500 tracking-[0.5em] font-bold whitespace-nowrap
-             uppercase transform -rotate-90
-           "
-         >
-           Nossa Equipe
-         </h2>
+        <h2
+          className="
+          text-gray-500 tracking-[0.5em] font-bold whitespace-nowrap
+          uppercase transform -rotate-90
+          "
+        >
+          Nossa Equipe
+        </h2>
       </div>
       <div
         className="
@@ -50,7 +54,7 @@ const Team = () => {
               alt={m.name}
               className="
                 object-cover
-                w-full h-80
+                w-100 h-100
                 transition-all
                 grayscale group-hover:grayscale-0
               "

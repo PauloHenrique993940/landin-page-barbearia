@@ -1,4 +1,21 @@
-@import  "tailwindcss";
+@import "tailwindcss";
+
+/* Estilos Globais e Comportamento de Rolagem */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0c0c0c;
+  color: #f1f1f1;
+  font-family: 'Poppins', sans-serif; /* Uma sugestão de fonte moderna */
+}
+
+/* Garante que o conteúdo principal não comece sob o Header fixo */
+main {
+  padding-top: 90px; /* Ajuste baseado na altura do Header */
+}
+
 /* Importar fontes */
 /*Definir variáveis */
 /* Criar estilos personalizados ->  eu posso contemplar para dentro do tailwind
