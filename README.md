@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# Landing Page Barbearia Premium
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta é uma landing page para uma barbearia premium, desenvolvida para apresentar os serviços, a equipe e as unidades da barbearia.
 
-Currently, two official plugins are available:
+## Construído com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*   [React](https://reactjs.org/) - Uma biblioteca JavaScript para construir interfaces de usuário.
+*   [Vite](https://vitejs.dev/) - Uma ferramenta de build que visa fornecer uma experiência de desenvolvimento mais rápida e enxuta para projetos web modernos.
+*   [TypeScript](https://www.typescriptlang.org/) - Um superconjunto de JavaScript que adiciona tipagem estática.
+*   [Tailwind CSS](https://tailwindcss.com/) - Um framework CSS utilitário para criar designs personalizados rapidamente.
+*   [React Router DOM](https://reactrouter.com/web/guides/quick-start) - Roteamento do lado do cliente para React.
 
-## React Compiler
+## Começando
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Siga estas instruções para obter uma cópia do projeto em funcionamento em sua máquina local para fins de desenvolvimento e teste.
 
-## Expanding the ESLint configuration
+### Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Você precisará ter o [Node.js](https://nodejs.org/) e o [npm](https://www.npmjs.com/) (ou [Yarn](https://yarnpkg.com/)) instalados em sua máquina.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Instalação
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  Clone o repositório:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+    ```sh
+    git clone https://github.com/seu-usuario/landing-page-barbearia-premium.git
+    ```
+
+2.  Navegue até o diretório do projeto:
+
+    ```sh
+    cd landing-page-barbearia-premium
+    ```
+
+3.  Instale as dependências:
+
+    ```sh
+    npm install
+    ```
+
+    ou, se você estiver usando o Yarn:
+
+    ```sh
+    yarn
+    ```
+
+## Uso
+
+### Servidor de Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
+
+```sh
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Isso iniciará o servidor de desenvolvimento e você poderá visualizar o projeto em `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Para criar uma versão de produção do projeto, execute:
+
+```sh
+npm run build
+```
+
+Isso criará uma pasta `dist` com os arquivos otimizados para produção.
+
+### Lint
+
+Para verificar o código com o ESLint, execute:
+
+```sh
+npm run lint
 ```
